@@ -7,7 +7,7 @@ Expected Documentation: Include the Python command and a comment with the expect
  -->
 
 
-from bookshel.models import Book
+from bookshelf.models import Book
 
 book = Book.objects.first()
 book.delete()
