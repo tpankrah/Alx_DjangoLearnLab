@@ -5,10 +5,4 @@ from . models import Book
 # Create your views here.
 def books(request):
     books = Book.objects.all()
-
-    output = []
-    for book in books:
-        output.append(f"{book.title} by {book.author}")
-    
-    return HttpResponse(output)
- 
+    return render(request,'relationship_app/list_books.html',{"books":books})
